@@ -1,0 +1,19 @@
+rustc --version
+
+rustup update stable
+
+cargo install sqlx-cli
+
+sqlx migrate add create_blog_posts_table //This is for creating migration for yous sql scripts
+
+cargo add sqlx --features postgres  //sql package for postgress
+
+cargo add serde --features derive //adding pcakage for serializing and deserializing
+
+cargo add env_logger dotenv //adding package for logging
+
+cargo add actix-web sqlx serde //adding multiple packages. actix web framework, sqlx for sql and serde for json serialization
+
+cargo new rest_api //creating a new project
+
+sqlx migrate run --database-url "postgres://postgres:password@localhost:5432/rust"
